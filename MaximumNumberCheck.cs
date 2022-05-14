@@ -16,14 +16,15 @@ namespace FindMaximum_Generics
             {
                 return firstValue;
             }
-            if (secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) > 0)
+            else if (secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) > 0)
             {
                 return secondValue;
             }
-            if (thirdValue.CompareTo(firstValue) > 0 && thirdValue.CompareTo(secondValue) > 0)
+            else if(thirdValue.CompareTo(firstValue) > 0 && thirdValue.CompareTo(secondValue) > 0)
             {
                 return thirdValue;
             }
+            else
             throw new Exception("First, Second and Third number are same : ");
         }
     }
