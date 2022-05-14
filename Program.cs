@@ -1,4 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 
 namespace FindMaximum_Generics
 {
@@ -7,22 +12,26 @@ namespace FindMaximum_Generics
       static void Main(string[] args)
       {
             //Welcome Message
-            Console.WriteLine("=-=-=-=-=-Welcome to the Find Maximum Problem using Generics-=-=-=-=-=");
+            Console.WriteLine("Welcome to Maximum Number");
 
-            //Maximum Integer Number
-            GenericMaximum<int> genericMaximumInteger = new GenericMaximum<int>(34, 23, 12);
-            int outputInteger1 = genericMaximumInteger.MaxMethod();
-            Console.WriteLine("Maximum Integer Number : " + outputInteger1);
+            int[] intArray = { 34, 23, 12, 36 };
+            float[] floatArray = { 12.5f, 45.65f, 987.45f, 658.78f };
+            string[] stringArray = { "Apple", "Peach", "Banana" };
 
-            //Maximum Float Number
-            GenericMaximum<float> genericMaximumFloat = new GenericMaximum<float>(3.4f, 22.23f, 48.12f);
-            float outputDouble1 = genericMaximumFloat.MaxMethod();
-            Console.WriteLine("Maximum Float Number : " + outputDouble1);
+            // Passing integer input with max number at first place
+            ExtendGenericMaximum<int> extendGenericMaximum = new ExtendGenericMaximum<int>(intArray);
+            int outputInt = extendGenericMaximum.MaxMethod();
 
-            //Maximum String Number
-            GenericMaximum<string> genericMaximumString = new GenericMaximum<string>("Apple", "Banana", "Peach");
-            string outputString1 = genericMaximumString.MaxMethod();
-            Console.WriteLine("Maximum String : " + outputString1);
+            ExtendGenericMaximum<float> extendGenericMaximum1 = new ExtendGenericMaximum<float>(floatArray);
+            float outputFloat = extendGenericMaximum1.MaxMethod();
+
+            ExtendGenericMaximum<string> extendGenericMaximum2 = new ExtendGenericMaximum<string>(stringArray);
+            string outputString = extendGenericMaximum2.MaxMethod();
+
+            //Display Output
+            Console.WriteLine("Integer Max : " + outputInt);
+            Console.WriteLine("Float Max : " + outputFloat);
+            Console.WriteLine("String Max : " + outputString);
 
             Console.ReadLine();
         }
