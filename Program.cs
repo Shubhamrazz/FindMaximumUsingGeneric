@@ -12,8 +12,8 @@ namespace FindMaximum_Generics
             //Calling Class to call a Function
             MaximumNumberCheck maximumNumberCheck = new MaximumNumberCheck();
 
-            //Maximum Number At Third Place
-            int outputInteger = maximumNumberCheck.MaximumIngerNumber(23, 54, 82);
+            //Find Maximum Integer
+            int outputInteger = maximumNumberCheck.MaximumIngerNumber(11,111,1111);
 
             //Display Output
             Console.WriteLine("Maximum Number of Integer : " + outputInteger);
